@@ -15,10 +15,17 @@
     <div
       class="d-flex flex-column bd-highlight justify-content-center align-items-center w-75 ms-5"
     >
-      <h1>Register</h1>
+      <h1>Welcome to Facebook</h1>
+      <h3>Please enter your Login information below</h3>
+
+      <div th:if="${error}">
+        Unable to login. Check your username and password.
+      </div>
+
+      <p>New here? Click <a th:href="@{/register}">here</a> to create an account.</p>
 
       <!-- tag::thAction[] -->
-      <form method="POST" th:action="@{/register}" id="registration">
+      <form method="POST" th:action="@{/login}" id="loginForm">
         <!-- end::thAction[] -->
         <label class="form-label" for="username">Username: </label>
         <input
@@ -36,7 +43,7 @@
           id="password"
         /><br />
 
-        <input class="btn btn-primary mt-5" type="submit" value="Register" />
+        <input class="btn btn-primary mt-5" type="submit" value="Login" />
       </form>
     </div>
   </body>

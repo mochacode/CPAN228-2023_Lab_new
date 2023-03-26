@@ -15,16 +15,10 @@
     <div
       class="d-flex flex-column bd-highlight justify-content-center align-items-center w-75 ms-5"
     >
-      <h1>Login</h1>
-
-      <div th:if="${error}">
-        Unable to login. Check your username and password.
-      </div>
-
-      <p>New here? Click <a th:href="@{/register}">here</a> to register.</p>
+      <h1>Registration Page</h1>
 
       <!-- tag::thAction[] -->
-      <form method="POST" th:action="@{/login}" id="loginForm">
+      <form method="POST" th:action="@{/register}" id="registration">
         <!-- end::thAction[] -->
         <label class="form-label" for="username">Username: </label>
         <input
@@ -42,7 +36,7 @@
           id="password"
         /><br />
 
-        <input class="btn btn-primary mt-5" type="submit" value="Login" />
+        <input class="btn btn-primary mt-5" type="submit" value="Register" />
       </form>
     </div>
   </body>
